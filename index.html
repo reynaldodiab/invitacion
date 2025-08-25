@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario con Fondo e Imagen</title>
+  <style>
+    /* --- Estilos generales --- */
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Arial', sans-serif;
+      background: url("fondo.jpg") no-repeat center center/cover; /* Fondo adaptable */
+    }
+
+    .contenedor {
+      background: rgba(255, 255, 255, 0.9); /* Fondo semitransparente */
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      width: 350px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+
+    /* --- Texto superior --- */
+    .titulo {
+      font-size: 22px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    /* --- Imagen decorativa --- */
+    .imagen-decorativa {
+      width: 100px;
+      height: auto;
+      margin: 15px 0;
+    }
+
+    /* --- Formulario --- */
+    label {
+      display: block;
+      text-align: left;
+      margin-top: 10px;
+      font-weight: bold;
+      color: #444;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    textarea {
+      resize: none;
+      height: 80px;
+    }
+
+    /* --- Botón de descarga --- */
+    .btn-descargar {
+      background: #4CAF50;
+      color: white;
+      padding: 15px 25px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-top: 20px;
+      width: 100%;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }S
+
+    .btn-descargar:hover {
+      background: #45a049;
+      transform: scale(1.05);
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="contenedor">
+    <!-- Texto superior -->
+    <div class="titulo">Formulario de Contacto</div>
+
+    <!-- Imagen decorativa -->
+    <img src="decorativa.png" alt="Imagen decorativa" class="imagen-decorativa">
+
+    <!-- Formulario -->
+    <form action="procesar.php" method="post">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" required></textarea>
+
+      <!-- Botón de descarga -->
+      <a href="imagen.jpg" download="mi_foto.jpg">
+        <button type="button" class="btn-descargar">📥 Descargar Imagen</button>
+      </a>
+    </form>
+  </div>
+
+</body>
+</html>
